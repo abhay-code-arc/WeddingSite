@@ -1,0 +1,120 @@
+.loader {
+  position: fixed;
+  inset: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #05070a;
+
+  overflow: hidden;
+
+  z-index: 9999;
+}
+
+/* ==========================================
+   Background Lighting
+========================================== */
+
+.loader::before {
+  content: '';
+
+  position: absolute;
+
+  width: 900px;
+  height: 900px;
+
+  left: 50%;
+  top: -520px;
+
+  transform: translateX(-50%);
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    ellipse,
+    rgba(212, 175, 55, 0.18),
+    rgba(212, 175, 55, 0.05),
+    transparent 72%
+  );
+
+  filter: blur(120px);
+}
+
+.loader::after {
+  content: '';
+
+  position: absolute;
+  inset: 0;
+
+  background: radial-gradient(ellipse, transparent 45%, rgba(0, 0, 0, 0.45));
+}
+
+/* ==========================================
+   Content
+========================================== */
+
+.content {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ==========================================
+   Initials
+========================================== */
+
+.initials {
+  display: flex;
+  align-items: center;
+  gap: 2.75rem;
+}
+
+.letter {
+  color: var(--color-ivory);
+
+  font-family: var(--font-heading);
+
+  font-size: clamp(4rem, 7vw, 7rem);
+
+  font-weight: 500;
+
+  letter-spacing: 0.08em;
+
+  user-select: none;
+}
+
+/* ==========================================
+   Gold Line
+========================================== */
+
+.line {
+  width: 160px;
+  height: 1px;
+
+  background: linear-gradient(to right, transparent, var(--color-gold), transparent);
+
+  box-shadow: 0 0 14px rgba(212, 175, 55, 0.35);
+}
+
+/* ==========================================
+   Responsive
+========================================== */
+
+@media (max-width: 768px) {
+  .initials {
+    gap: 1.5rem;
+  }
+
+  .line {
+    width: 90px;
+  }
+
+  .letter {
+    font-size: clamp(3rem, 14vw, 4.8rem);
+  }
+}
