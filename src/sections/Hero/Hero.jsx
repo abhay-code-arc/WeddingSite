@@ -1,6 +1,5 @@
 import HeroBackground from './HeroBackground';
 import HeroContent from './HeroContent';
-import HeroScroll from './HeroScroll';
 
 import styles from './Hero.module.css';
 
@@ -12,8 +11,6 @@ function Hero() {
       <div className={`container ${styles.container}`}>
         <HeroContent />
       </div>
-
-      <HeroScroll />
     </section>
   );
 }

@@ -1,33 +1,33 @@
 .hero {
   position: relative;
-
   min-height: 100vh;
-
   overflow: hidden;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .container {
   position: relative;
-
   z-index: 10;
 
   width: min(100%, var(--container-width));
+  max-width: var(--container-width);
 
-  min-height: 100vh;
+  min-height: calc(100vh - 140px);
 
   display: flex;
   justify-content: center;
   align-items: center;
 
+  margin: 0 auto;
+
   padding-inline: 2rem;
+  padding-bottom: 140px;
 }
 
 @media (max-width: 768px) {
   .container {
+    min-height: calc(100vh - 110px);
+
     padding-inline: 1.25rem;
+    padding-bottom: 110px;
   }
 }
