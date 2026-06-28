@@ -1,0 +1,39 @@
+/* ==========================================================
+   UTILITIES
+   ========================================================== */
+
+.container {
+  width: min(92%, var(--container-width));
+  margin-inline: auto;
+}
+
+.section {
+  position: relative;
+  padding-block: var(--space-xxl);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.gold {
+  color: var(--color-gold);
+}
+
+.ivory {
+  color: var(--color-ivory);
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.04);
+
+  backdrop-filter: blur(14px);
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  border-radius: var(--radius-lg);
+}
+
+.shadow {
+  box-shadow: var(--shadow-soft);
+}

@@ -1,0 +1,44 @@
+/* ==========================================================
+   BASE
+   ========================================================== */
+
+html {
+  background: var(--color-midnight);
+}
+
+body {
+  background:
+    radial-gradient(circle at top, rgba(212, 175, 55, 0.05), transparent 40%), var(--color-midnight);
+
+  overflow-x: hidden;
+
+  color: var(--color-text);
+
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+::selection {
+  background: var(--color-gold);
+  color: var(--color-black);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #08131d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(212, 175, 55, 0.35);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 175, 55, 0.55);
+}

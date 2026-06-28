@@ -1,0 +1,62 @@
+:root {
+  /* ==========================================
+     COLORS
+     ========================================== */
+
+  --color-black: #111111;
+  --color-midnight: #07131e;
+  --color-emerald: #0e1d2b;
+
+  --color-gold: #d4af37;
+  --color-gold-dark: #a46c2d;
+
+  --color-champagne: #f7e7b4;
+  --color-ivory: #fff9f0;
+
+  --color-text: rgba(255, 249, 240, 0.92);
+  --color-text-soft: rgba(255, 249, 240, 0.65);
+
+  --color-border: rgba(212, 175, 55, 0.15);
+
+  /* ==========================================
+     SPACING
+     ========================================== */
+
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 6rem;
+  --space-xxl: 8rem;
+
+  /* ==========================================
+     RADIUS
+     ========================================== */
+
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 40px;
+
+  /* ==========================================
+     SHADOWS
+     ========================================== */
+
+  --shadow-soft: 0 20px 40px rgba(0, 0, 0, 0.25);
+
+  /* ==========================================
+     TRANSITIONS
+     ========================================== */
+
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --transition-fast: 250ms var(--ease);
+  --transition-medium: 500ms var(--ease);
+  --transition-slow: 900ms var(--ease);
+
+  /* ==========================================
+     MAX WIDTH
+     ========================================== */
+
+  --container-width: 1400px;
+}
