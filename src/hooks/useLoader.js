@@ -1,17 +1,24 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 function useLoader() {
-  const [isLoading, setIsLoading] = useState(true);
+  const [loaderVisible, setLoaderVisible] = useState(true);
+  const [heroReady, setHeroReady] = useState(false);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 3000);
+  const finishLoader = () => {
+    // Mount Hero first
+    setHeroReady(true);
 
-    return () => clearTimeout(timer);
-  }, []);
+    // Remove Loader on the next animation frame
+    requestAnimationFrame(() => {
+      setLoaderVisible(false);
+    });
+  };
 
-  return isLoading;
+  return {
+    loaderVisible,
+    heroReady,
+    finishLoader,
+  };
 }
 
 export default useLoader;

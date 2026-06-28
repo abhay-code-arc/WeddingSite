@@ -8,15 +8,23 @@ function HeroContent() {
 
   return (
     <div className={styles.content}>
-      <p className={styles.overline}>{hero.tagline}</p>
+      <p className={styles.overline} data-animate="overline">
+        {hero.tagline}
+      </p>
 
       <div className={styles.heading}>
         <h1 className={styles.name} data-animate="groom">
           {couple.groom.displayName}
         </h1>
 
-        <div className={styles.ornament} data-animate="ornament">
-          ❦
+        <div className={styles.union}>
+          <span className={styles.line} data-line />
+
+          <span className={styles.ampersand} data-ampersand>
+            &amp;
+          </span>
+
+          <span className={styles.line} data-line />
         </div>
 
         <h1 className={styles.name} data-animate="bride">
@@ -24,15 +32,11 @@ function HeroContent() {
         </h1>
       </div>
 
-      <div className={styles.divider}>
-        <span />
-      </div>
-
       <p className={styles.date} data-animate="date">
         {wedding.date}
       </p>
 
-      <div className={styles.action}>
+      <div className={styles.action} data-animate="button">
         <Button>{hero.buttonText}</Button>
       </div>
     </div>

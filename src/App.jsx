@@ -1,16 +1,16 @@
-import Hero from './sections/Hero/Hero';
 import Loader from './components/Loader/Loader';
+import Hero from './sections/Hero/Hero';
 
 import useLoader from './hooks/useLoader';
 
 function App() {
-  const isLoading = useLoader();
+  const { loaderVisible, heroReady, finishLoader } = useLoader();
 
   return (
     <>
-      {isLoading && <Loader />}
+      {loaderVisible && <Loader onFinish={finishLoader} />}
 
-      <Hero />
+      {heroReady && <Hero startAnimation />}
     </>
   );
 }

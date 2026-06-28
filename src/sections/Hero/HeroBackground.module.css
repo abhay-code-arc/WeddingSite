@@ -5,32 +5,32 @@
   z-index: 0;
 }
 
-/* ==========================================
-   Base Background
-========================================== */
+/* ===========================
+   Base
+=========================== */
 
 .base {
   position: absolute;
   inset: 0;
 
   background:
-    radial-gradient(ellipse at top, rgba(212, 175, 55, 0.08), transparent 38%),
-    radial-gradient(ellipse at bottom, rgba(15, 34, 50, 0.45), transparent 55%),
-    linear-gradient(to bottom, #05070a 0%, #07131e 55%, #05070a 100%);
+    radial-gradient(circle at 50% 12%, rgba(212, 175, 55, 0.12), transparent 28%),
+    radial-gradient(circle at 50% 55%, rgba(10, 27, 44, 0.72), transparent 62%),
+    linear-gradient(to bottom, #040608 0%, #07131d 48%, #040608 100%);
 }
 
-/* ==========================================
-   Luxury Lighting
-========================================== */
+/* ===========================
+   Lighting
+=========================== */
 
 .topGlow {
   position: absolute;
 
-  width: 1400px;
+  width: 1600px;
   height: 900px;
 
-  top: -720px;
   left: 50%;
+  top: -760px;
 
   transform: translateX(-50%);
 
@@ -43,7 +43,25 @@
     transparent 72%
   );
 
-  filter: blur(120px);
+  filter: blur(140px);
+}
+
+.centerGlow {
+  position: absolute;
+
+  left: 50%;
+  top: 46%;
+
+  width: 820px;
+  height: 820px;
+
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  background: radial-gradient(circle, rgba(22, 39, 55, 0.42), transparent 72%);
+
+  filter: blur(70px);
 }
 
 .bottomGlow {
@@ -52,14 +70,14 @@
   width: 1200px;
   height: 700px;
 
-  bottom: -520px;
   left: 50%;
+  bottom: -520px;
 
   transform: translateX(-50%);
 
   border-radius: 50%;
 
-  background: radial-gradient(ellipse, rgba(8, 18, 28, 0.9), transparent 70%);
+  background: radial-gradient(ellipse, rgba(5, 10, 15, 0.92), transparent 72%);
 
   filter: blur(90px);
 }
@@ -67,13 +85,13 @@
 .leftLight {
   position: absolute;
 
-  width: 600px;
-  height: 100%;
-
-  left: -300px;
+  left: -260px;
   top: 0;
 
-  background: radial-gradient(ellipse, rgba(212, 175, 55, 0.03), transparent 75%);
+  width: 520px;
+  height: 100%;
+
+  background: radial-gradient(ellipse, rgba(212, 175, 55, 0.03), transparent 72%);
 
   filter: blur(100px);
 }
@@ -81,45 +99,88 @@
 .rightLight {
   position: absolute;
 
-  width: 600px;
-  height: 100%;
-
-  right: -300px;
+  right: -260px;
   top: 0;
 
-  background: radial-gradient(ellipse, rgba(212, 175, 55, 0.03), transparent 75%);
+  width: 520px;
+  height: 100%;
+
+  background: radial-gradient(ellipse, rgba(212, 175, 55, 0.03), transparent 72%);
 
   filter: blur(100px);
 }
 
-/* ==========================================
-   Atmosphere
-========================================== */
+/* ===========================
+   Mist
+=========================== */
 
 .mist {
   position: absolute;
-  inset: 0;
+  inset: -10%;
 
-  opacity: 0.18;
+  opacity: 0.22;
 
   background:
-    radial-gradient(circle at 25% 35%, rgba(255, 255, 255, 0.04), transparent 18%),
-    radial-gradient(circle at 75% 45%, rgba(255, 255, 255, 0.03), transparent 22%),
-    radial-gradient(circle at 55% 80%, rgba(255, 255, 255, 0.02), transparent 18%);
+    radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.04), transparent 18%),
+    radial-gradient(circle at 80% 42%, rgba(255, 255, 255, 0.035), transparent 18%),
+    radial-gradient(circle at 45% 72%, rgba(255, 255, 255, 0.03), transparent 20%);
 
   filter: blur(90px);
+
+  animation: floatingMist 22s ease-in-out infinite alternate;
 }
+
+@keyframes floatingMist {
+  from {
+    transform: translateY(0) scale(1);
+  }
+
+  to {
+    transform: translateY(-35px) scale(1.05);
+  }
+}
+
+/* ===========================
+   Particles
+=========================== */
+
+.particles {
+  position: absolute;
+  inset: 0;
+
+  opacity: 0.22;
+
+  background-image: radial-gradient(circle, #d4af37 1px, transparent 1.6px);
+
+  background-size: 170px 170px;
+
+  animation: particlesMove 90s linear infinite;
+}
+
+@keyframes particlesMove {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-170px);
+  }
+}
+
+/* ===========================
+   Vignette
+=========================== */
 
 .vignette {
   position: absolute;
   inset: 0;
 
-  background: radial-gradient(ellipse, transparent 42%, rgba(0, 0, 0, 0.55));
+  background: radial-gradient(ellipse, transparent 38%, rgba(0, 0, 0, 0.6));
 }
 
-/* ==========================================
-   Luxury Frame
-========================================== */
+/* ===========================
+   Frame
+=========================== */
 
 .frame {
   position: absolute;
@@ -134,8 +195,6 @@
   background: rgba(212, 175, 55, 0.18);
 }
 
-/* Top */
-
 .top {
   top: 0;
   left: 0;
@@ -143,8 +202,6 @@
   width: 100%;
   height: 1px;
 }
-
-/* Right */
 
 .right {
   top: 0;
@@ -154,8 +211,6 @@
   height: 100%;
 }
 
-/* Bottom */
-
 .bottom {
   bottom: 0;
   left: 0;
@@ -163,8 +218,6 @@
   width: 100%;
   height: 1px;
 }
-
-/* Left */
 
 .left {
   top: 0;
@@ -174,9 +227,9 @@
   height: 100%;
 }
 
-/* ==========================================
-   Responsive
-========================================== */
+/* ===========================
+   Mobile
+=========================== */
 
 @media (max-width: 768px) {
   .frame {
@@ -184,8 +237,13 @@
   }
 
   .topGlow {
-    width: 900px;
+    width: 950px;
     height: 700px;
+  }
+
+  .centerGlow {
+    width: 520px;
+    height: 520px;
   }
 
   .bottomGlow {
