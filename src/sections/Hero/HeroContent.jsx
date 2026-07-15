@@ -18,7 +18,7 @@ function HeroContent() {
     const storySection = document.getElementById('story');
 
     if (storySection) {
-      const y = storySection.getBoundingClientRect().top + window.pageYOffset - 40; // adjust if needed
+      const y = storySection.offsetTop;
 
       window.scrollTo({
         top: y,

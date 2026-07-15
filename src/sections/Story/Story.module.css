@@ -86,16 +86,17 @@
 
 @media (max-width: 768px) {
   .story {
-    min-height: 100vh;
+    min-height: 100svh;
 
     display: flex;
     align-items: center;
+    justify-content: center;
 
-    padding: 2.5rem 0;
+    padding: 1rem 0;
   }
 
   .container {
-    padding-inline: 1.25rem;
+    padding: 1rem 1.25rem;
   }
 
   .storyWrapper {
