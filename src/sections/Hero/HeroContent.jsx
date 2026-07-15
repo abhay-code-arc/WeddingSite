@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import siteData from '../../constants/siteData';
 import Button from '../../components/Button/Button';
 
@@ -5,6 +7,29 @@ import styles from './HeroContent.module.css';
 
 function HeroContent() {
   const { couple, wedding, hero } = siteData;
+
+  const [isScrolling, setIsScrolling] = useState(false);
+
+  const handleBeginJourney = () => {
+    if (isScrolling) return;
+
+    setIsScrolling(true);
+
+    const storySection = document.getElementById('story');
+
+    if (storySection) {
+      const y = storySection.getBoundingClientRect().top + window.pageYOffset - 40; // adjust if needed
+
+      window.scrollTo({
+        top: y,
+        behavior: 'smooth',
+      });
+    }
+
+    setTimeout(() => {
+      setIsScrolling(false);
+    }, 1000);
+  };
 
   return (
     <div className={styles.content}>
@@ -37,7 +62,9 @@ function HeroContent() {
       </p>
 
       <div className={styles.action} data-animate="button">
-        <Button>{hero.buttonText}</Button>
+        <Button onClick={handleBeginJourney} disabled={isScrolling}>
+          {hero.buttonText}
+        </Button>
       </div>
     </div>
   );

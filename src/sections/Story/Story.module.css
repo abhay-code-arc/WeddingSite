@@ -1,110 +1,117 @@
 .story {
   position: relative;
 
-  padding: 10rem 0;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
 
   background: linear-gradient(to bottom, #05070a 0%, #06101a 40%, #07131d 100%);
 }
-
 .container {
   width: min(100%, var(--container-width));
 
   margin: 0 auto;
 
-  padding-inline: 2rem;
+  padding: 5rem 2rem;
 }
 
 .content {
-  max-width: 760px;
+  max-width: 820px;
 
   margin: 0 auto;
+}
+
+.storyWrapper {
+  margin-top: 1.5rem;
 
   text-align: center;
 }
 
-.divider {
-  width: 90px;
-  height: 1px;
+.storyContent {
+  width: 100%;
+  max-width: 820px;
 
-  margin: 0 auto 2.5rem;
+  margin: 2rem auto 0;
 
-  background: linear-gradient(to right, transparent, rgba(212, 175, 55, 0.9), transparent);
+  padding-inline: 1rem;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 3rem;
+
+  text-align: center;
 }
 
-.label {
-  color: rgba(255, 249, 240, 0.7);
+.paragraph {
+  max-width: 760px;
 
-  font-family: var(--font-body);
+  margin: 0 auto;
 
-  font-size: 0.78rem;
+  color: rgba(255, 249, 240, 0.84);
 
-  letter-spacing: 0.45rem;
+  font-family: var(--font-elegant);
 
-  text-transform: uppercase;
+  font-size: 1.3rem;
 
-  margin-bottom: 1.5rem;
+  line-height: 2.2;
+
+  letter-spacing: 0.02rem;
+
+  text-align: center;
+
+  opacity: 0;
+
+  transform: translateY(30px);
 }
 
-.title {
-  margin: 0;
+.paragraph:last-child {
+  color: rgba(255, 249, 240, 0.84);
 
-  color: var(--color-ivory);
+  font-size: 1.4rem;
 
-  font-family: var(--font-heading);
-
-  font-size: clamp(2.6rem, 5vw, 4.2rem);
-
-  font-weight: 600;
-
-  line-height: 1.15;
+  font-weight: 500;
 }
 
-.story {
-  margin-top: 2rem;
-
-  color: rgba(255, 249, 240, 0.82);
-
-  font-family: var(--font-body);
-
-  font-size: 1.1rem;
-
-  line-height: 2;
-
-  letter-spacing: 0.01em;
-}
-
-.bottomDivider {
-  margin-top: 4rem;
+.ornament {
+  margin-top: 3rem;
 
   color: var(--color-gold);
 
   font-size: 1.8rem;
 
-  opacity: 0.85;
+  opacity: 0.9;
 }
 
 @media (max-width: 768px) {
   .story {
-    padding: 7rem 0;
+    padding: 6rem 0;
   }
 
   .container {
     padding-inline: 1.25rem;
   }
 
-  .label {
-    font-size: 0.68rem;
-
-    letter-spacing: 0.25rem;
+  .storyWrapper {
+    margin-top: 1.5rem;
   }
 
-  .title {
-    font-size: clamp(2rem, 10vw, 3rem);
+  .storyContent {
+    margin-top: 2rem;
+
+    padding-inline: 0.5rem;
+
+    gap: 2.2rem;
   }
 
-  .story {
-    font-size: 1rem;
+  .paragraph {
+    font-size: 1.05rem;
 
-    line-height: 1.9;
+    line-height: 2;
+  }
+
+  .paragraph:last-child {
+    font-size: 1.12rem;
   }
 }

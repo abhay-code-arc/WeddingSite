@@ -1,0 +1,222 @@
+.celebrations {
+  position: relative;
+
+  padding: 10rem 0;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(circle at bottom, rgba(212, 175, 55, 0.04), transparent 40%),
+    linear-gradient(to bottom, #05070a 0%, #07131d 50%, #05070a 100%);
+}
+
+.container {
+  width: min(100%, var(--container-width));
+
+  margin: 0 auto;
+
+  padding-inline: 2rem;
+}
+
+/* ==========================================
+   Cards Wrapper
+========================================== */
+
+.cards {
+  margin-top: 5rem;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 5rem;
+}
+
+/* ==========================================
+   Card
+========================================== */
+
+.card {
+  position: relative;
+
+  max-width: 700px;
+
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+/* ==========================================
+   Decorative Lines
+========================================== */
+
+.topLine,
+.bottomLine {
+  width: 170px;
+  height: 1px;
+
+  background: linear-gradient(to right, transparent, rgba(212, 175, 55, 0.9), transparent);
+
+  box-shadow: 0 0 12px rgba(212, 175, 55, 0.15);
+}
+
+.topLine {
+  margin-bottom: 2.4rem;
+}
+
+.bottomLine {
+  margin-top: 2.4rem;
+}
+
+/* ==========================================
+   Typography
+========================================== */
+
+.title {
+  margin: 0;
+
+  color: var(--color-gold);
+
+  font-family: var(--font-heading);
+
+  font-size: clamp(2rem, 4vw, 2.8rem);
+
+  font-weight: 500;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+}
+
+.date {
+  margin-top: 2rem;
+
+  color: var(--color-ivory);
+
+  font-family: var(--font-elegant);
+
+  font-size: 1.4rem;
+
+  letter-spacing: 0.05rem;
+}
+
+.time {
+  margin-top: 0.9rem;
+
+  color: rgba(255, 249, 240, 0.84);
+
+  font-family: var(--font-body);
+
+  font-size: 1rem;
+
+  letter-spacing: 0.14rem;
+
+  text-transform: uppercase;
+}
+
+.venue {
+  margin-top: 0.9rem;
+
+  color: rgba(255, 249, 240, 0.62);
+
+  font-family: var(--font-body);
+
+  font-size: 0.95rem;
+
+  letter-spacing: 0.08rem;
+}
+
+/* ==========================================
+   Reveal Animation
+========================================== */
+
+.card {
+  opacity: 0;
+
+  transform: translateY(50px);
+
+  transition:
+    opacity 0.9s ease,
+    transform 0.9s ease;
+}
+
+.card.visible {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+/* ==========================================
+   Hover (Desktop Only)
+========================================== */
+
+@media (hover: hover) {
+  .card:hover .title {
+    color: #f1d47b;
+
+    transition: color 0.35s ease;
+  }
+
+  .card:hover .topLine,
+  .card:hover .bottomLine {
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.35);
+  }
+}
+
+/* ==========================================
+   Mobile
+========================================== */
+
+@media (max-width: 768px) {
+  .celebrations {
+    padding: 7rem 0;
+  }
+
+  .container {
+    padding-inline: 1.25rem;
+  }
+
+  .cards {
+    margin-top: 4rem;
+
+    gap: 4rem;
+  }
+
+  .topLine,
+  .bottomLine {
+    width: 90px;
+  }
+
+  .topLine {
+    margin-bottom: 1.8rem;
+  }
+
+  .bottomLine {
+    margin-top: 1.8rem;
+  }
+
+  .title {
+    font-size: 1.7rem;
+
+    letter-spacing: 0.08em;
+  }
+
+  .date {
+    margin-top: 1.5rem;
+
+    font-size: 1.1rem;
+  }
+
+  .time {
+    font-size: 0.9rem;
+
+    letter-spacing: 0.1rem;
+  }
+
+  .venue {
+    font-size: 0.82rem;
+  }
+}

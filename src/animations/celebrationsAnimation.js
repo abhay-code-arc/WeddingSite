@@ -1,24 +1,24 @@
 import { gsap } from 'gsap';
 
-export function playStoryAnimation(section) {
+export function playCelebrationsAnimation(section) {
   const q = gsap.utils.selector(section);
 
-  gsap.set(q('.story-paragraph'), {
+  gsap.set(q('.celebration-card'), {
     opacity: 0,
-    y: 30,
+    y: 40,
   });
 
   const tl = gsap.timeline({
     defaults: {
-      ease: 'power2.out',
+      ease: 'power3.out',
     },
   });
 
-  tl.to(q('.story-paragraph'), {
+  tl.to(q('.celebration-card'), {
     opacity: 1,
     y: 0,
-    duration: 1.3,
-    stagger: 0.8,
+    duration: 0.8,
+    stagger: 0.25,
   });
 
   return tl;

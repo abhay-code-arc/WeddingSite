@@ -1,0 +1,211 @@
+.countdown {
+  position: relative;
+
+  padding: 10rem 0;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(circle at top, rgba(212, 175, 55, 0.05), transparent 35%),
+    linear-gradient(to bottom, #07131d 0%, #05070a 100%);
+}
+
+.container {
+  width: min(100%, var(--container-width));
+
+  margin: 0 auto;
+
+  padding-inline: 2rem;
+}
+
+.content {
+  max-width: 760px;
+
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+/* ==========================================
+   Counter
+========================================== */
+
+.counter {
+  margin-top: 4.5rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.days {
+  color: var(--color-gold);
+
+  font-family: var(--font-heading);
+
+  font-size: clamp(6rem, 16vw, 9rem);
+
+  font-weight: 600;
+
+  line-height: 0.9;
+
+  letter-spacing: 0.02em;
+
+  text-shadow:
+    0 0 20px rgba(212, 175, 55, 0.12),
+    0 0 50px rgba(212, 175, 55, 0.05);
+}
+
+.unit {
+  margin-top: 1rem;
+
+  color: var(--color-ivory);
+
+  font-family: var(--font-body);
+
+  font-size: 0.85rem;
+
+  letter-spacing: 0.45rem;
+
+  text-transform: uppercase;
+
+  opacity: 0.8;
+}
+
+/* ==========================================
+   Divider
+========================================== */
+
+.separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 1rem;
+
+  width: 100%;
+
+  margin: 3rem 0;
+}
+
+.line {
+  width: 120px;
+  height: 1px;
+
+  background: linear-gradient(to right, transparent, rgba(212, 175, 55, 0.95), transparent);
+
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.15);
+}
+
+.star {
+  color: var(--color-gold);
+
+  font-size: 1rem;
+
+  opacity: 0.85;
+}
+
+/* ==========================================
+   Details
+========================================== */
+
+.details {
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.65rem;
+
+  align-items: center;
+}
+
+.date {
+  color: var(--color-champagne);
+
+  font-family: var(--font-elegant);
+
+  font-size: 1.45rem;
+
+  letter-spacing: 0.08rem;
+
+  margin: 0;
+}
+
+.time {
+  color: rgba(255, 249, 240, 0.82);
+
+  font-family: var(--font-body);
+
+  font-size: 1rem;
+
+  letter-spacing: 0.08rem;
+
+  margin: 0;
+}
+
+.location {
+  color: rgba(255, 249, 240, 0.58);
+
+  font-family: var(--font-body);
+
+  font-size: 0.95rem;
+
+  letter-spacing: 0.08rem;
+
+  margin: 0;
+}
+
+/* ==========================================
+   Responsive
+========================================== */
+
+@media (max-width: 768px) {
+  .countdown {
+    padding: 7rem 0;
+  }
+
+  .container {
+    padding-inline: 1.25rem;
+  }
+
+  .counter {
+    margin-top: 3.5rem;
+  }
+
+  .days {
+    font-size: clamp(4.6rem, 25vw, 6.5rem);
+  }
+
+  .unit {
+    font-size: 0.72rem;
+
+    letter-spacing: 0.28rem;
+
+    margin-top: 0.8rem;
+  }
+
+  .separator {
+    gap: 0.8rem;
+
+    margin: 2.4rem 0;
+  }
+
+  .line {
+    width: 65px;
+  }
+
+  .date {
+    font-size: 1.1rem;
+  }
+
+  .time {
+    font-size: 0.92rem;
+  }
+
+  .location {
+    font-size: 0.82rem;
+  }
+}

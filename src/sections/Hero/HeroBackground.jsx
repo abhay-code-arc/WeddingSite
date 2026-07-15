@@ -19,14 +19,6 @@ function HeroBackground() {
       <div className={styles.mist} />
       <div className={styles.particles} />
       <div className={styles.vignette} />
-
-      {/* Luxury Frame */}
-      <div className={styles.frame}>
-        <span className={styles.top} />
-        <span className={styles.right} />
-        <span className={styles.bottom} />
-        <span className={styles.left} />
-      </div>
     </div>
   );
 }
