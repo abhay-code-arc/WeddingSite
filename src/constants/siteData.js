@@ -42,38 +42,44 @@ const siteData = {
   events: [
     {
       id: 'engagement',
-
       title: 'Engagement',
-
       date: '22 August 2026',
-
       time: '6:00 PM',
 
-      venue: 'Nagapattinam',
+      address: {
+        line1: 'Saraswathi Mahal, Kizhvelur',
+        line2: 'Nagapattinam, Tamil Nadu 611104',
+      },
+
+      mapsUrl: 'https://maps.app.goo.gl/569yMTgVxpLNP9XY8',
     },
 
     {
       id: 'wedding',
-
       title: 'Wedding',
-
       date: '23 August 2026',
-
       time: '8:00 AM',
 
-      venue: 'Nagapattinam',
+      address: {
+        line1: 'Saraswathi Mahal, Kizhvelur',
+        line2: 'Nagapattinam, Tamil Nadu 611104',
+      },
+
+      mapsUrl: 'https://maps.app.goo.gl/569yMTgVxpLNP9XY8',
     },
 
     {
       id: 'reception',
-
       title: 'Reception',
-
       date: '28 August 2026',
-
       time: '4:00 PM',
 
-      venue: 'Nagercoil',
+      address: {
+        line1: 'Pon Mahal, Thiruthuvapuram',
+        line2: 'Kanyakumari, Tamil Nadu 629163',
+      },
+
+      mapsUrl: 'https://maps.app.goo.gl/1q6GevZc2fgfuHy97',
     },
   ],
 };

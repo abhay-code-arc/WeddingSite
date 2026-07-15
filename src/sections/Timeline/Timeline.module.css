@@ -1,0 +1,327 @@
+.timeline {
+  position: relative;
+
+  padding: 9rem 0;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(7, 19, 29, 0) 0%,
+    #07131d 18%,
+    #06101a 55%,
+    #05070a 100%
+  );
+
+  margin-top: -80px;
+}
+
+.container {
+  width: min(100%, var(--container-width));
+
+  margin: 0 auto;
+
+  padding-inline: 2rem;
+}
+
+.content {
+  max-width: 900px;
+
+  margin: 0 auto;
+}
+
+.timelineWrapper {
+  position: relative;
+
+  margin-top: 5rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 6rem;
+}
+
+.line {
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+  left: 50%;
+
+  width: 1px;
+
+  transform: translateX(-50%);
+
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(212, 175, 55, 0.4),
+    rgba(212, 175, 55, 0.4),
+    transparent
+  );
+}
+
+.event {
+  position: relative;
+
+  width: 100%;
+  max-width: 520px;
+
+  text-align: center;
+
+  padding: 0 2rem;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+
+  margin: 0 auto 2rem;
+
+  border-radius: 50%;
+
+  background: var(--color-gold);
+
+  box-shadow:
+    0 0 8px rgba(212, 175, 55, 0.55),
+    0 0 20px rgba(212, 175, 55, 0.2);
+}
+
+.title {
+  margin: 0;
+
+  color: var(--color-ivory);
+
+  font-family: var(--font-heading);
+
+  font-size: 2.3rem;
+
+  font-weight: 500;
+
+  letter-spacing: 0.03em;
+}
+
+.date {
+  margin-top: 1.25rem;
+
+  color: var(--color-gold);
+
+  font-family: var(--font-elegant);
+
+  font-size: 1.25rem;
+
+  letter-spacing: 0.08rem;
+}
+
+.time {
+  margin-top: 0.75rem;
+
+  color: rgba(255, 249, 240, 0.92);
+
+  font-family: var(--font-body);
+
+  font-size: 1.1rem;
+}
+
+/* ===========================
+   Location
+=========================== */
+
+.location {
+  margin-top: 1.25rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.addressRow {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 0.55rem;
+}
+
+.locationIcon {
+  color: var(--color-gold);
+
+  font-size: 1rem;
+
+  flex-shrink: 0;
+}
+
+.addressRow span {
+  color: rgba(255, 249, 240, 0.68);
+
+  font-family: var(--font-body);
+
+  font-size: 0.94rem;
+
+  line-height: 1.6;
+}
+
+.addressLine {
+  margin-top: 0.25rem;
+
+  padding-left: 1.55rem;
+
+  color: rgba(255, 249, 240, 0.68);
+
+  font-family: var(--font-body);
+
+  font-size: 0.94rem;
+
+  line-height: 1.6;
+
+  text-align: left;
+}
+
+/* ===========================
+   Maps Link
+=========================== */
+
+.mapLink {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  width: fit-content;
+
+  margin: 1.3rem auto 0;
+
+  gap: 0.45rem;
+
+  color: var(--color-gold);
+
+  text-decoration: none;
+
+  font-family: var(--font-body);
+
+  font-size: 0.95rem;
+
+  letter-spacing: 0.04rem;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.mapLink:hover {
+  color: #f4d46b;
+
+  transform: translateY(-2px);
+}
+
+.mapIcon {
+  font-size: 1.05rem;
+
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .timeline {
+    padding: 7rem 0;
+
+    margin-top: -50px;
+  }
+
+  .container {
+    padding-inline: 1.25rem;
+  }
+
+  .timelineWrapper {
+    margin-top: 4rem;
+
+    gap: 4.5rem;
+  }
+
+  .event {
+    padding: 0;
+  }
+
+  .dot {
+    margin-bottom: 1.5rem;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .date {
+    margin-top: 1.2rem;
+
+    font-size: 1.08rem;
+  }
+
+  .time {
+    margin-top: 0.6rem;
+
+    font-size: 0.95rem;
+  }
+
+  .location {
+    margin-top: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .addressRow {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 0.45rem;
+
+    max-width: 250px;
+  }
+
+  .locationIcon {
+    color: var(--color-gold);
+
+    font-size: 0.9rem;
+
+    flex-shrink: 0;
+  }
+
+  .addressRow span {
+    max-width: 220px;
+
+    font-size: 0.84rem;
+
+    line-height: 1.5;
+
+    text-align: left;
+  }
+
+  .addressLine {
+    margin-top: 0.2rem;
+
+    max-width: 220px;
+
+    padding-left: 1.35rem;
+
+    font-size: 0.84rem;
+
+    line-height: 1.5;
+
+    text-align: left;
+  }
+
+  .mapLink {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 0.4rem;
+
+    margin: 1rem auto 0;
+
+    font-size: 0.85rem;
+  }
+
+  .mapIcon {
+    font-size: 0.9rem;
+  }
+}

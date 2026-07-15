@@ -2,6 +2,7 @@ import Loader from './components/Loader/Loader';
 
 import Hero from './sections/Hero/Hero';
 import Story from './sections/Story/Story';
+import Timeline from './sections/Timeline/Timeline';
 import Countdown from './sections/Countdown/Countdown';
 
 import useLoader from './hooks/useLoader';
@@ -18,6 +19,7 @@ function App() {
           <Hero startAnimation />
           <Story />
           <Countdown />
+          <Timeline />
         </main>
       )}
     </>

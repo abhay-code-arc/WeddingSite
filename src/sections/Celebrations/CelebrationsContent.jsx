@@ -1,4 +1,5 @@
 import SectionHeading from '../../components/SectionHeading/SectionHeading';
+import { HiOutlineMapPin } from 'react-icons/hi2';
 
 import siteData from '../../constants/siteData';
 
@@ -16,6 +17,13 @@ function CelebrationCard({ event }) {
       <p className={styles.time}>{event.time}</p>
 
       <p className={styles.venue}>{event.venue}</p>
+
+      <p className={styles.address}>{event.address}</p>
+
+      <a href={event.mapsUrl} target="_blank" rel="noopener noreferrer" className={styles.mapLink}>
+        <HiOutlineMapPin className={styles.mapIcon} />
+        <span>Open in Google Maps</span>
+      </a>
 
       <div className={styles.bottomLine} />
     </article>

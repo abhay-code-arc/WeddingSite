@@ -47,6 +47,20 @@
   align-items: center;
 
   text-align: center;
+
+  opacity: 0;
+
+  transform: translateY(50px);
+
+  transition:
+    opacity 0.9s ease,
+    transform 0.9s ease;
+}
+
+.card.visible {
+  opacity: 1;
+
+  transform: translateY(0);
 }
 
 /* ==========================================
@@ -120,33 +134,65 @@
 .venue {
   margin-top: 0.9rem;
 
-  color: rgba(255, 249, 240, 0.62);
+  color: rgba(255, 249, 240, 0.72);
+
+  font-family: var(--font-body);
+
+  font-size: 1rem;
+
+  letter-spacing: 0.08rem;
+}
+
+.address {
+  margin-top: 0.8rem;
+
+  max-width: 500px;
+
+  color: rgba(255, 249, 240, 0.55);
+
+  font-family: var(--font-body);
+
+  font-size: 0.92rem;
+
+  line-height: 1.8;
+}
+
+.mapLink {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 0.55rem;
+
+  margin-top: 1.8rem;
+
+  color: var(--color-gold);
 
   font-family: var(--font-body);
 
   font-size: 0.95rem;
 
-  letter-spacing: 0.08rem;
-}
+  letter-spacing: 0.04rem;
 
-/* ==========================================
-   Reveal Animation
-========================================== */
-
-.card {
-  opacity: 0;
-
-  transform: translateY(50px);
+  text-decoration: none;
 
   transition:
-    opacity 0.9s ease,
-    transform 0.9s ease;
+    color 0.3s ease,
+    transform 0.3s ease,
+    opacity 0.3s ease;
 }
 
-.card.visible {
-  opacity: 1;
+.mapLink:hover {
+  color: #f0cb63;
 
-  transform: translateY(0);
+  transform: translateY(-2px);
+}
+
+.mapIcon {
+  font-size: 1.15rem;
+
+  flex-shrink: 0;
 }
 
 /* ==========================================
@@ -163,6 +209,10 @@
   .card:hover .topLine,
   .card:hover .bottomLine {
     box-shadow: 0 0 20px rgba(212, 175, 55, 0.35);
+  }
+
+  .card:hover .mapLink {
+    color: #f7d56d;
   }
 }
 
@@ -217,6 +267,24 @@
   }
 
   .venue {
-    font-size: 0.82rem;
+    font-size: 0.9rem;
+  }
+
+  .address {
+    font-size: 0.85rem;
+
+    line-height: 1.7;
+
+    max-width: 100%;
+  }
+
+  .mapLink {
+    font-size: 0.88rem;
+
+    margin-top: 1.4rem;
+  }
+
+  .mapIcon {
+    font-size: 1rem;
   }
 }
