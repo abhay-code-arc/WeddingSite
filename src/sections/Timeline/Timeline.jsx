@@ -1,5 +1,5 @@
 import TimelineContent from './TimelineContent';
-
+import ScrollHint from '../../components/ScrollHint/ScrollHint';
 import styles from './Timeline.module.css';
 
 import useReveal from '../../hooks/useReveal';
@@ -14,6 +14,7 @@ function Timeline() {
       <div className={styles.container}>
         <TimelineContent />
       </div>
+      <ScrollHint event="timeline-animation-complete" />
     </section>
   );
 }

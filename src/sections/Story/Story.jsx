@@ -1,4 +1,5 @@
 import StoryContent from './StoryContent';
+import ScrollHint from '../../components/ScrollHint/ScrollHint';
 
 import styles from './Story.module.css';
 
@@ -14,6 +15,8 @@ function Story() {
       <div className={`container ${styles.container}`}>
         <StoryContent />
       </div>
+
+      <ScrollHint event="story-animation-complete" />
     </section>
   );
 }

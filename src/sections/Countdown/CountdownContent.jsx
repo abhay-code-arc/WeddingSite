@@ -30,24 +30,26 @@ function CountdownContent() {
 
   return (
     <div className={styles.content}>
-      <SectionHeading
-        label="COUNTDOWN"
-        title={
-          <>
-            Counting
-            <br />
-            The Days
-          </>
-        }
-      />
+      <div className="countdown-heading">
+        <SectionHeading
+          label="COUNTDOWN"
+          title={
+            <>
+              Counting
+              <br />
+              The Days
+            </>
+          }
+        />
+      </div>
 
-      <div className={styles.counter}>
+      <div className={`${styles.counter} countdown-counter`}>
         <span className={styles.days}>{days}</span>
 
         <span className={styles.unit}>DAYS TO GO</span>
       </div>
 
-      <div className={styles.separator}>
+      <div className={`${styles.separator} countdown-separator`}>
         <span className={styles.line}></span>
 
         <span className={styles.star}>✦</span>
@@ -55,7 +57,7 @@ function CountdownContent() {
         <span className={styles.line}></span>
       </div>
 
-      <div className={styles.details}>
+      <div className={`${styles.details} countdown-details`}>
         <p className={styles.date}>{siteData.wedding.date}</p>
 
         <p className={styles.time}>{siteData.wedding.time}</p>

@@ -15,7 +15,7 @@ function TimelineContent() {
 
         {siteData.events.map((event) => (
           <div key={event.id} className={styles.event} data-event>
-            <div className={styles.dot} />
+            <div className={styles.dot} data-dot></div>
 
             <h3 className={styles.title}>{event.title}</h3>
 

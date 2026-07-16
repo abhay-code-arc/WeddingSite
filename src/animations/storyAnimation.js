@@ -21,5 +21,9 @@ export function playStoryAnimation(section) {
     stagger: 0.8,
   });
 
+  tl.call(() => {
+    window.dispatchEvent(new Event('story-animation-complete'));
+  });
+
   return tl;
 }

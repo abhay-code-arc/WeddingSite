@@ -14,9 +14,9 @@ const siteData = {
   wedding: {
     date: '23 August 2026',
 
-    time: '8:00 AM',
+    time: '7:00 AM',
 
-    countdownTarget: '2026-08-23T08:00:00',
+    countdownTarget: '2026-08-23T07:00:00',
 
     venue: 'Nagapattinam',
   },
@@ -58,7 +58,7 @@ const siteData = {
       id: 'wedding',
       title: 'Wedding',
       date: '23 August 2026',
-      time: '8:00 AM',
+      time: '7:00 AM',
 
       address: {
         line1: 'Saraswathi Mahal, Kizhvelur',
@@ -82,6 +82,19 @@ const siteData = {
       mapsUrl: 'https://maps.app.goo.gl/1q6GevZc2fgfuHy97',
     },
   ],
+  closing: {
+    message: [
+      'Our journey together would not be complete without the love and support of the friends and family who mean the world to us.',
+      'We warmly invite you to celebrate with us as we begin our forever, surrounded by joy, laughter, and cherished memories.',
+    ],
+
+    assistance: {
+      title: 'Need any assistance?',
+      subtitle: 'For any wedding-related queries, feel free to reach out.',
+    },
+
+    contacts: ['+91 89037 45584', '+91 95971 67588', '+91 94452 62489'],
+  },
 };
 
 export default siteData;

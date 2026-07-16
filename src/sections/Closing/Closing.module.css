@@ -1,0 +1,239 @@
+.closing {
+  position: relative;
+
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+
+  background: linear-gradient(to bottom, #05070a 0%, #06111b 18%, #07131d 55%, #08141f 100%);
+}
+
+.container {
+  width: min(100%, var(--container-width));
+
+  margin: 0 auto;
+
+  padding: 5rem 2rem;
+}
+
+.content {
+  max-width: 760px;
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+/* ==========================================
+   Top Divider
+========================================== */
+
+.divider {
+  width: 90px;
+  height: 1px;
+
+  margin: 0 auto;
+
+  background: rgba(201, 170, 113, 0.45);
+
+  opacity: 0;
+}
+
+/* ==========================================
+   Bottom Divider
+========================================== */
+
+.endDivider {
+  position: relative;
+
+  width: 220px;
+  height: 1px;
+
+  margin: 4.5rem auto 0;
+
+  background: linear-gradient(to right, transparent, rgba(212, 175, 55, 0.75), transparent);
+
+  opacity: 0;
+}
+
+.endDivider::after {
+  content: '✦';
+
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  padding: 0 14px;
+
+  background: #08141f;
+
+  color: rgba(212, 175, 55, 0.9);
+
+  font-size: 0.85rem;
+}
+
+/* ==========================================
+   Message
+========================================== */
+
+.message {
+  margin: 3rem 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 2rem;
+}
+
+.paragraph {
+  color: rgba(255, 249, 240, 0.84);
+
+  font-family: var(--font-elegant);
+
+  font-size: 1.18rem;
+
+  line-height: 2;
+
+  letter-spacing: 0.02rem;
+
+  opacity: 0;
+
+  transform: translateY(24px);
+}
+
+/* ==========================================
+   Assistance
+========================================== */
+
+.assistance {
+  margin-top: 3.5rem;
+
+  opacity: 0;
+
+  transform: translateY(24px);
+}
+
+.title {
+  color: var(--color-ivory);
+
+  font-family: var(--font-heading);
+
+  font-size: 1.45rem;
+
+  font-weight: 500;
+}
+
+.subtitle {
+  margin-top: 0.85rem;
+
+  color: rgba(255, 249, 240, 0.72);
+
+  font-size: 1rem;
+
+  line-height: 1.8;
+}
+
+.contacts {
+  margin-top: 2rem;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 1.5rem;
+
+  align-items: center;
+}
+
+.contact {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 0.65rem;
+
+  color: rgba(255, 249, 240, 0.92);
+
+  font-size: 1.05rem;
+
+  text-decoration: none;
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+.contact:hover {
+  opacity: 0.8;
+
+  transform: translateY(-1px);
+}
+
+.icon {
+  color: var(--color-gold);
+
+  font-size: 1rem;
+}
+
+/* ==========================================
+   Mobile
+========================================== */
+
+@media (max-width: 768px) {
+  .closing {
+    min-height: 100svh;
+  }
+
+  .container {
+    padding: 3rem 1.4rem;
+  }
+
+  .message {
+    margin: 2.5rem 0;
+
+    gap: 1.6rem;
+  }
+
+  .paragraph {
+    font-size: 1.02rem;
+
+    line-height: 1.95;
+  }
+
+  .assistance {
+    margin-top: 3rem;
+  }
+
+  .title {
+    font-size: 1.25rem;
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+
+    line-height: 1.7;
+  }
+
+  .contacts {
+    gap: 1.2rem;
+  }
+
+  .contact {
+    font-size: 1rem;
+  }
+
+  .endDivider {
+    width: 180px;
+
+    margin-top: 4rem;
+  }
+
+  .endDivider::after {
+    font-size: 0.75rem;
+
+    padding: 0 10px;
+  }
+}

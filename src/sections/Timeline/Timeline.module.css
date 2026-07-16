@@ -1,17 +1,18 @@
 .timeline {
   position: relative;
 
-  padding: 9rem 0;
+  padding: 6rem 0 5rem;
 
   background: linear-gradient(
     to bottom,
     rgba(7, 19, 29, 0) 0%,
     #07131d 18%,
     #06101a 55%,
+    #060c13 82%,
     #05070a 100%
   );
 
-  margin-top: -80px;
+  margin-top: -30px;
 }
 
 .container {
@@ -31,13 +32,13 @@
 .timelineWrapper {
   position: relative;
 
-  margin-top: 5rem;
+  margin-top: 4rem;
 
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  gap: 6rem;
+  gap: 5rem;
 }
 
 .line {
@@ -69,6 +70,12 @@
   text-align: center;
 
   padding: 0 2rem;
+
+  opacity: 0;
+
+  transform: translateY(40px);
+
+  will-change: transform, opacity;
 }
 
 .dot {
@@ -82,8 +89,10 @@
   background: var(--color-gold);
 
   box-shadow:
-    0 0 8px rgba(212, 175, 55, 0.55),
-    0 0 20px rgba(212, 175, 55, 0.2);
+    0 0 8px rgba(212, 175, 55, 0.45),
+    0 0 18px rgba(212, 175, 55, 0.18);
+
+  will-change: transform;
 }
 
 .title {
@@ -220,9 +229,9 @@
 
 @media (max-width: 768px) {
   .timeline {
-    padding: 7rem 0;
+    padding: 5rem 0 4rem;
 
-    margin-top: -50px;
+    margin-top: -20px;
   }
 
   .container {
@@ -230,9 +239,9 @@
   }
 
   .timelineWrapper {
-    margin-top: 4rem;
+    margin-top: 3rem;
 
-    gap: 4.5rem;
+    gap: 3.8rem;
   }
 
   .event {
